@@ -7,6 +7,11 @@ Simply open a browser and request to localhost:8080/boxpizza/&lt;pizza&gt;
 ### Adding a node
 In order to simulate a second node on the same machine, we should run the second JVM
 overriding some configurations, specifically the exposed-port and the seed-node port.
+#### Node A
+```sh
+sbt run
+```
+#### Node B
 ```sh
 sbt run -Dapplication.exposed-port=8081 -Dclustering.port=2552
 ```
