@@ -1,0 +1,25 @@
+(
+ :root-dir "/home/codep/coding/scala/cluster-pizza"
+ :cache-dir "/home/codep/coding/scala/cluster-pizza/.ensime_cache"
+ :scala-compiler-jars ("/home/codep/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.11.8.jar" "/home/codep/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar" "/home/codep/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.8.jar" "/home/codep/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.11.8.jar")
+ :name "cluster-pizza"
+ :java-home "/usr/lib/jvm/java-8-openjdk"
+ :java-flags ("-Xss2m" "-Xms1024m" "-Xmx1024m" "-XX:ReservedCodeCacheSize=128m" "-XX:MaxMetaspaceSize=256m")
+ :reference-source-roots nil
+ :scala-version "2.11.8"
+ :compiler-args ("-feature" "-deprecation" "-Xlint" "-Yinline-warnings" "-Yno-adapted-args" "-Ywarn-dead-code" "-Ywarn-numeric-widen" "-Xfuture" "-Ywarn-unused-import")
+ :formatting-prefs nil
+ :disable-source-monitoring nil
+ :disable-class-monitoring nil
+ :subprojects ((
+   :name "cluster-pizza"
+   :source-roots ("/home/codep/coding/scala/cluster-pizza/src/main/java" "/home/codep/coding/scala/cluster-pizza/src/test/java" "/home/codep/coding/scala/cluster-pizza/src/main/scala" "/home/codep/coding/scala/cluster-pizza/src/test/scala")
+   :targets ("/home/codep/coding/scala/cluster-pizza/target/scala-2.11/classes")
+   :test-targets ("/home/codep/coding/scala/cluster-pizza/target/scala-2.11/test-classes")
+   :depends-on-modules nil
+   :compile-deps ("/home/codep/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.4.4.jar" "/home/codep/.ivy2/cache/com.typesafe/config/bundles/config-1.3.0.jar" "/home/codep/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/bundles/scala-java8-compat_2.11-0.7.0.jar" "/home/codep/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar")
+   :runtime-deps nil
+   :test-deps nil
+   :doc-jars ("/home/codep/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/docs/akka-actor_2.11-2.4.4-javadoc.jar" "/home/codep/coding/scala/cluster-pizza/target/scala-2.11/cluster-pizza_2.11-1.0-javadoc.jar" "/home/codep/.ivy2/cache/com.typesafe/config/docs/config-1.3.0-javadoc.jar" "/home/codep/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/docs/scala-java8-compat_2.11-0.7.0-javadoc.jar" "/home/codep/.ivy2/cache/org.scala-lang/scala-library/docs/scala-library-2.11.8-javadoc.jar")
+   :reference-source-roots ("/home/codep/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/srcs/akka-actor_2.11-2.4.4-sources.jar" "/home/codep/.ivy2/cache/com.typesafe/config/srcs/config-1.3.0-sources.jar" "/home/codep/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.11/srcs/scala-java8-compat_2.11-0.7.0-sources.jar" "/home/codep/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar")))
+)
