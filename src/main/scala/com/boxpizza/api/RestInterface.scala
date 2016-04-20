@@ -18,7 +18,7 @@ class RestInterface(waiter: ActorRef, exposedPort: Int) extends Actor with HttpS
       get {
         complete {
           log.info(s"Request for pizza $order")
-          waiter.ask(order)(5 seconds).mapTo[Bill]
+          waiter.ask(CookRequest(1, order))(5 seconds).mapTo[Bill]
         }
       }
     }
