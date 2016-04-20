@@ -9,16 +9,13 @@ import com.boxpizza.actors.WaiterActor
 import com.boxpizza.api.RestInterface
 
 object SingleBoxPizza extends App {
-  val config = ConfigFactory.parseString(s"""
-    akka.actor.provider = akka.cluster.ClusterActorRefProvider
-    akka.cluster.seed-nodes = ["akka.tcp://ClusterBoxPizza@127.0.0.1:2500"]
-  """)
+  val config = ConfigFactory.load("application")
   implicit val system = ActorSystem("ClusterBoxPizza", config)
   Cluster(system).registerOnMemberUp {
     val roundRobinPool = RoundRobinPool(nrOfInstances = 10)
     val clusterRoutingSettings = ClusterRouterPoolSettings(totalInstances = 10, maxInstancesPerNode = 5, allowLocalRoutees = true, useRole = None)
     val clusterPool = ClusterRouterPool(roundRobinPool, clusterRoutingSettings)
     val router = system.actorOf(clusterPool.props(Props[WaiterActor]))
-    system.actorOf(Props(new RestInterface(router, 8080)))
+    system.actorOf(Props(new RestInterface(router, config getInt "application.exposed-port")))
   }
 }
