@@ -14,7 +14,7 @@ import scala.concurrent.duration._
 
 class RestInterface(waiter: ActorRef, exposedPort: Int) extends Actor with HttpServiceBase with ActorLogging {
   val route: Route = {
-    path("pizzeria" / "\\S+".r) { order =>
+    path("boxpizza" / "\\S+".r) { order =>
       get {
         complete {
           log.info(s"Request for pizza $order")

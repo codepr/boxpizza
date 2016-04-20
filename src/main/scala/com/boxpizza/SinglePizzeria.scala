@@ -6,7 +6,7 @@ import com.boxpizza.actors.WaiterActor
 import com.boxpizza.api.RestInterface
 
 object SinglePizzeria extends App {
-  implicit val system = ActorSystem("pizzeria")
+  implicit val system = ActorSystem("boxpizza")
   val waiter = system.actorOf(Props[WaiterActor])
   system.actorOf(Props(new RestInterface(waiter, 8080)))
 }
