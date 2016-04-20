@@ -3,7 +3,7 @@ Simple toy actor system modeling a pizzeria, it's main purpose is the exploratio
 of akka toolkit functionalities and spray.
 
 ## Testing
-Simply open a browser and request to localhost:8080/boxpizza/&ltpizza&gt
+Simply open a browser and request to localhost:8080/boxpizza/&lt;pizza&gt;
 ### Performance
 *Dependancies:* parallel
 Make some requests specified inside URLs.txt in parallel, 2000 times each with keep-alive connection
