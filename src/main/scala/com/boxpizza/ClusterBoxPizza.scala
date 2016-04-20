@@ -12,7 +12,7 @@ object SingleBoxPizza extends App {
   val config = ConfigFactory.parseString(s"""
     akka.actor.provider = akka.cluster.ClusterActorRefProvider
     akka.cluster.seed-nodes = ["akka.tcp://ClusterBoxPizza@127.0.0.1:2500"]
-    """)
+  """)
   implicit val system = ActorSystem("ClusterBoxPizza", config)
   Cluster(system).registerOnMemberUp {
     val roundRobinPool = RoundRobinPool(nrOfInstances = 10)
